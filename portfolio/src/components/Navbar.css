@@ -1,0 +1,144 @@
+/* src/components/Navbar.css */
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00B2FF;
+    text-shadow: 0 0 10px #00B2FF;
+}
+
+/* Hide hamburger and cancel buttons by default */
+.hamburg,
+.cancel {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    display: none; /* Hidden by default */
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+/* Desktop navigation */
+.nav-container .links {
+    display: flex;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #00B2FF;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover {
+    color: #00B2FF;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+/* Mobile dropdown menu */
+.dropdown {
+    z-index: 1001;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+    display: none; /* Hidden by default */
+}
+
+.dropdown .links {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown .links a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+    background-color: #00B2FF;
+}
+
+/* Desktop and larger screens */
+@media (min-width: 885px) {
+    .dropdown {
+        display: none !important; /* Always hide dropdown on desktop */
+    }
+    .hamburg,
+    .cancel {
+        display: none !important; /* Always hide menu buttons on desktop */
+    }
+}
+
+/* Mobile and smaller screens */
+@media (max-width: 884px) {
+    nav .logo {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    .nav-container .links {
+        display: none; /* Hide desktop menu */
+    }
+    .hamburg {
+        display: block; /* Show hamburger menu */
+    }
+    .dropdown {
+        display: block; /* Show dropdown container */
+    }
+    .cancel {
+        display: block; /* Show cancel button in dropdown */
+        position: static; /* Reset position */
+        margin: 15px; /* Add some spacing */
+    }
+}
+
+/* Add more styles as needed */

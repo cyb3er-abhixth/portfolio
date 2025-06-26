@@ -1,0 +1,115 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page setup */
+.about-page {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: black;
+    position: relative;
+    overflow: visible;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #00B2FF;
+    text-shadow: 0 0 10px #00B2FF;
+    margin-bottom: 2rem;
+}
+
+/* Section styling - consistent for all sections */
+.about-section {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 178, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.about-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 178, 255, 0.2);
+}
+
+.about-section h2 {
+    color: #00B2FF;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    margin-bottom: 0;
+}
+
+/* Highlight text and emoji styling */
+.highlight-text {
+    color: #00B2FF;
+    font-weight: bold;
+}
+
+.emoji {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+/* Conclusion section */
+.conclusion {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .about-container h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-section {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+/* Ensure smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}

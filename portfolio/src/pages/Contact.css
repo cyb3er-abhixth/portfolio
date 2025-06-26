@@ -1,0 +1,130 @@
+/* src/pages/Contact.css - Modern, responsive styling for Contact page */
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: transparent;
+  padding: 40px 0;
+  /* Remove any animation or transition that could cause disappearance */
+}
+
+section {
+  background: #10141a; /* Ensure dark background for the whole section */
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.contact {
+  background: #181f2a; /* Use dark card background */
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 60, 255, 0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+  padding: 48px 36px 36px 36px;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  color: #e0e0e0; /* Ensure text is light for dark background */
+  /* Remove animation: fadeIn 1s; */
+}
+
+.contact-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #e0e0e0 !important;
+  letter-spacing: 1px;
+  margin-bottom: 0.2em;
+  text-align: center;
+  width: 100%;
+}
+
+.contact-title span {
+  color: #2563eb !important;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: #bfc6d1 !important;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: #f1f5f9;
+  border-radius: 14px;
+  padding: 18px 20px;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(37,99,235,0.04);
+}
+
+.info:hover {
+  box-shadow: 0 4px 16px rgba(37,99,235,0.10);
+  background: #e0e7ef;
+}
+
+.info i {
+  font-size: 1.6rem;
+  color: #2563eb;
+  margin-top: 2px;
+  min-width: 32px;
+  text-shadow: 0 2px 8px rgba(37,99,235,0.08);
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.info-subtitle {
+  font-size: 0.98rem;
+  color: #374151;
+  word-break: break-word;
+}
+
+.info-subtitle a {
+  color: #2563eb !important;
+  text-decoration: underline;
+  background: none;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 32px 12px 24px 12px;
+    max-width: 98vw;
+  }
+  .contact-title {
+    font-size: 1.5rem;
+  }
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+  .info {
+    padding: 12px 10px;
+    gap: 12px;
+  }
+  .info i {
+    font-size: 1.2rem;
+    min-width: 24px;
+  }
+}
